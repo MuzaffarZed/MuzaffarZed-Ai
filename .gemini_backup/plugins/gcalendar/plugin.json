@@ -1,0 +1,12 @@
+{
+  "name": "gcalendar",
+  "displayName": "Google Calendar",
+  "version": "0.0.7",
+  "description": "Check availability, schedule events, and RSVP.",
+  "logo": "https://www.gstatic.com/images/branding/productlogos/calendar_2026/v2/web/192px.svg",
+  "suggestedPrompts": [
+    "Book 30 minutes with Priya and Sam next week",
+    "What's on my calendar today? Flag any conflicts",
+    "Block focus time before Friday's launch review"
+  ]
+}

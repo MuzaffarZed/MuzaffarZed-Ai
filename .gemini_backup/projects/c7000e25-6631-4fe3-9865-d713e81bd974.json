@@ -1,0 +1,18 @@
+{
+  "id": "c7000e25-6631-4fe3-9865-d713e81bd974",
+  "name": "Downloads",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///c%3A/Users/MuzaffarZed/Downloads"
+      }
+    ]
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "sandboxMode": false,
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO"
+  },
+  "isWorkspaceOnly": false
+}

@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "jarvis-windows-controller": {
+      "command": "C:\\Users\\MuzaffarZed\\ai_workspace\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\MuzaffarZed\\ai_workspace\\bridge\\mcp_server.py"
+      ]
+    },
+    "notebooks": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\MuzaffarZed\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "notebooks-antigravityide"
+      ]
+    },
+    "visualization": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\MuzaffarZed\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "visualization-antigravityide"
+      ]
+    },
+    "data-agent-kit": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\MuzaffarZed\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "dataAgentKit-antigravityide"
+      ]
+    },
+    "google-cloud-audit-manager-us-central1": {
+      "serverUrl": "https://auditmanager.us-central1.rep.googleapis.com/mcp",
+      "authProviderType": "google_credentials"
+    },
+    "google-cloud-audit-manager-europe-west1": {
+      "serverUrl": "https://auditmanager.europe-west1.rep.googleapis.com/mcp",
+      "authProviderType": "google_credentials"
+    },
+    "antimetal": {
+      "serverUrl": "https://mcp.antimetal.com"
+    },
+    "windsor": {
+      "serverUrl": "https://mcp.windsor.ai"
+    },
+    "gitlab-orbit": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://gitlab.com/api/v4/orbit/mcp",
+        "--header",
+        "Authorization: Bearer ${GITLAB_PAT}"
+      ],
+      "env": {
+        "GITLAB_PAT": "YOUR_GITLAB_PAT_HERE"
+      }
+    }
+  }
+}

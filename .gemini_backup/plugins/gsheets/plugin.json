@@ -1,0 +1,12 @@
+{
+  "name": "gsheets",
+  "displayName": "Google Sheets",
+  "version": "0.0.7",
+  "description": "Read, write, and format spreadsheets.",
+  "logo": "https://www.gstatic.com/images/branding/productlogos/sheets_2026/v2/web/192px.svg",
+  "suggestedPrompts": [
+    "Find the trends and outliers in this sales sheet",
+    "Build a monthly budget tracker with formulas and a chart",
+    "Import this CSV and turn it into a pivot table by region"
+  ]
+}

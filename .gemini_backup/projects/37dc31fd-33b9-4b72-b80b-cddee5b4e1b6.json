@@ -1,0 +1,18 @@
+{
+  "id": "37dc31fd-33b9-4b72-b80b-cddee5b4e1b6",
+  "name": "ai_workspace",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///c%3A/Users/MuzaffarZed/ai_workspace"
+      }
+    ]
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "sandboxMode": false,
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO"
+  },
+  "isWorkspaceOnly": false
+}

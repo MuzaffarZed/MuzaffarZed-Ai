@@ -1,0 +1,12 @@
+{
+  "name": "gslides",
+  "displayName": "Google Slides",
+  "version": "0.0.7",
+  "description": "Read, edit, and export presentations.",
+  "logo": "https://www.gstatic.com/images/branding/productlogos/slides_2026/v2/web/192px.svg",
+  "suggestedPrompts": [
+    "Turn my project notes into a 10-slide pitch deck",
+    "Add a summary slide and speaker notes to my review deck",
+    "Export the final deck as a PDF"
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "plugins": {
+    "android-cli-plugin": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/android-cli-plugin",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.0.16625370"
+      }
+    },
+    "chrome-devtools-plugin": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/chrome-devtools-plugin",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.10.1"
+      }
+    },
+    "flutter": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/flutter",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.0.6"
+      }
+    },
+    "gcalendar": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gcalendar",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.7"
+      }
+    },
+    "gdocs": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gdocs",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.8"
+      }
+    },
+    "gdrive": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gdrive",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.8"
+      }
+    },
+    "gemini-api": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gemini-api",
+        "marketplace": "antigravity-plugins-official",
+        "version": "2.3.0"
+      }
+    },
+    "google-antigravity-sdk": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/google-antigravity-sdk",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.9"
+      }
+    },
+    "google-cloud-developer": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/google-cloud-developer",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.1.14"
+      }
+    },
+    "google-developer-knowledge": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/google-developer-knowledge",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.0.2"
+      }
+    },
+    "google_maps_platform": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/google_maps_platform",
+        "marketplace": "antigravity-plugins-official",
+        "version": "1.0.0"
+      }
+    },
+    "gsheets": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gsheets",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.7"
+      }
+    },
+    "gslides": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/gslides",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.7"
+      }
+    },
+    "modern-web-guidance-plugin": {
+      "installedFrom": {
+        "id": "antigravity-plugins-official/plugin/modern-web-guidance-plugin",
+        "marketplace": "antigravity-plugins-official",
+        "version": "0.0.196"
+      }
+    }
+  },
+  "sidecars": {
+    "android-cli-plugin/compose-preview": {
+      "projectId": "a7e301be-7849-4a93-8de7-951d710b3b42",
+      "schemaVersion": 1
+    },
+    "android-cli-plugin/device-hub": {
+      "projectId": "44bf408b-559a-476b-b6ef-d961e8224b76",
+      "schemaVersion": 1
+    },
+    "science/biomolecular_structure_viewer": {
+      "projectId": "f87d62f6-0c25-40b0-a23f-1f2c6d74eed5",
+      "resolvedPermissions": null,
+      "schemaVersion": 1
+    }
+  },
+  "userSettings": {
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "browserJsExecutionPolicy": "BROWSER_JS_EXECUTION_POLICY_TURBO",
+    "conversationWidth": "CONVERSATION_WIDTH_WIDE",
+    "enableSoundsForSpecialEvents": true,
+    "enableTerminalSandbox": false,
+    "globalPermissionGrants": {
+      "allow": [
+        "command(.venv\\Scripts\\python test_all_modules.py)",
+        "command(.venv\\Scripts\\python -m py_compile main.py)",
+        "command(Remove-Item -Path telegram_bot.py -ErrorAction SilentlyContinue)",
+        "command(.venv\\Scripts\\python -m py_compile config_manager.py speech_engine.py llm_router.py local_driver.py vision_grounding.py desktop_hud.py main.py)",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom google import genai\n\ncfg = config_manager.load_config()\nkey = cfg.get('gemini_api_key', '')\nprint('API Key present:', bool(key))\n\nclient = genai.Client(api_key=key) if key else None\nif client:\n    try:\n        models = list(client.models.list())\n        print('Available models count:', len(models))\n        for m in models[:10]:\n            print('Model:', getattr(m, 'name', m))\n    except Exception as e:\n        print('Error listing models:', e)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom google import genai\n\ncfg = config_manager.load_config()\nkey = cfg.get('gemini_api_key', '')\nclient = genai.Client(api_key=key)\n\nres = client.models.generate_content(\n    model='models/gemini-2.5-flash',\n    contents='Salom, sen kimsan?'\n)\nprint('Response:', res.text)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom google import genai\n\ncfg = config_manager.load_config()\nkey = cfg.get('gemini_api_key', '')\nclient = genai.Client(api_key=key)\n\ntest_models = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-2.5-flash-lite', 'gemini-1.5-flash', 'gemini-2.0-flash']\n\nfor m in test_models:\n    try:\n        res = client.models.generate_content(model=m, contents='Salom')\n        print(f'SUCCESS with {m}:', res.text[:50])\n        break\n    except Exception as e:\n        print(f'Failed {m}:', e)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom google import genai\n\ncfg = config_manager.load_config()\nkey = cfg.get('gemini_api_key', '')\nclient = genai.Client(api_key=key)\n\ntest_models = ['gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.1-flash-lite']\n\nfor m in test_models:\n    try:\n        res = client.models.generate_content(model=m, contents='Salom')\n        print(f'SUCCESS with {m}:', res.text[:50])\n    except Exception as e:\n        print(f'Failed {m}:', e)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom llm_router import LLMRouter\n\ncfg = config_manager.load_config()\nrouter = LLMRouter(api_key=cfg.get('gemini_api_key', ''))\n\nres = router.generate('salom jarvis qalaysan')\nprint('JARVIS RESULT:', res)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport config_manager\nfrom llm_router import LLMRouter\n\ncfg = config_manager.load_config()\nrouter = LLMRouter(api_key=cfg.get('gemini_api_key', ''))\n\nres = router.generate('salom jarvis qalaysan')\nprint('JARVIS RESULT:', res)\n\")",
+        "command(.venv\\Scripts\\python -c \"\nimport pyaudio\np = pyaudio.PyAudio()\nprint('PyAudio initialized successfully. Default input device:', p.get_default_input_device_info().get('name'))\nprint('Default output device:', p.get_default_output_device_info().get('name'))\np.terminate()\n\")",
+        "command(.venv\\Scripts\\python -m py_compile finance_manager.py task_manager.py jarvis_tools.py gemini_live_engine.py desktop_hud.py main.py)",
+        "command(.venv\\Scripts\\python run_live_test.py)",
+        "command(.venv\\Scripts\\python -m py_compile gemini_live_engine.py)",
+        "command(.venv\\Scripts\\python -m py_compile memory_vault.py audio_fx.py workflow_agent.py terminal_copilot.py system_guardian.py jarvis_tools.py gemini_live_engine.py main.py)",
+        "command(.\\.venv\\Scripts\\python.exe deep_audit_suite.py)",
+        "command(.venv\\Scripts\\python.exe deep_audit_suite.py)",
+        "command(.venv\\Scripts\\python.exe -c \"from google.genai import types; print([x for x in dir(types) if 'Live' in x or 'FunctionResponse' in x])\")",
+        "command(.venv\\Scripts\\python.exe -c \"from google.genai import types; import inspect; print(inspect.signature(types.LiveClientToolResponse)); print(inspect.signature(types.FunctionResponse))\")",
+        "command(.venv\\Scripts\\python.exe -c \"from google.genai import types; print(types.LiveClientToolResponse.model_fields.keys() if hasattr(types.LiveClientToolResponse, 'model_fields') else dir(types.LiveClientToolResponse)); print(types.FunctionResponse.model_fields.keys() if hasattr(types.FunctionResponse, 'model_fields') else dir(types.FunctionResponse))\")",
+        "command(.venv\\Scripts\\python.exe -c \"from google.genai import types; import inspect; f = types.FunctionResponse(name='test', id='1', response={'result': 'ok'}); print(f); print(types.FunctionResponse)\")",
+        "command(.venv\\Scripts\\python.exe smart_audio_interruption_controller.py)",
+        "mcp(gemini-api-docs/gemini_search_docs)",
+        "command(git clone --depth 1 https://github.com/googleapis/python-genai.git C:\\Users\\MuzaffarZed\\.gemini\\antigravity\\scratch\\python-genai)",
+        "read_file(C:\\Users\\MuzaffarZed\\Desktop)",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phase3_core.py)",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phase4_db_migration.py)",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phase5_6_tools_security.py)",
+        "command(.venv\\Scripts\\python.exe -c \"import google.genai as genai; print(getattr(genai, '__version__', 'unknown'))\")",
+        "command(.venv\\Scripts\\python.exe -c \"from google.genai import types; print([x for x in dir(types) if 'Live' in x])\")",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phases7_10_ai_live.py)",
+        "command(.venv\\Scripts\\python.exe -c \"import sounddevice, pyaudio, pygame; print('Audio libs available')\")",
+        "command(.venv\\Scripts\\python.exe -c \"import pyaudio, pygame; print('PyAudio \u0026 Pygame available')\")",
+        "command(.venv\\Scripts\\python.exe -c \"import audioop; print('audioop available')\")",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phases11_12_audio.py)",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phases13_15_windows_vision.py)",
+        "command(.venv\\Scripts\\python.exe scripts/doctor.py)",
+        "command(.venv\\Scripts\\python.exe tests/unit/test_phase18_ui.py)",
+        "command(.venv\\Scripts\\python.exe main.py --test-ui)",
+        "command(.venv\\Scripts\\python.exe tests/integration/test_recovery_and_pipeline.py)",
+        "command(.venv\\Scripts\\python.exe scripts\\deep_audit.py)",
+        "command(Test-Path tests\\__init__.py, tests\\unit\\__init__.py, tests\\integration\\__init__.py)",
+        "command(New-Item -ItemType File -Force tests\\__init__.py, tests\\unit\\__init__.py, tests\\integration\\__init__.py)",
+        "command(.venv\\Scripts\\python.exe -c \"from memory.database import get_db_manager; db = get_db_manager(); print('tasks in jarvis_v8.db:', db.fetch_all('SELECT count(*) as c FROM tasks'))\")",
+        "command(.venv\\Scripts\\python.exe -c \"from memory.database import get_db_manager; db = get_db_manager(); print('count:', db.fetch_one('SELECT count(*) as c FROM tasks')['c'])\")",
+        "command(.venv\\Scripts\\python.exe -c \"from memory.database import get_db_manager; from memory.migrations import MigrationManager; m = MigrationManager(get_db_manager()); print(m.run_migration())\")",
+        "command(New-Item -ItemType Directory -Force packaging)",
+        "command(Get-ChildItem -Recurse data)",
+        "command(powershell.exe -ExecutionPolicy Bypass -File packaging\\build.ps1)",
+        "command(Get-Item dist\\JARVIS.exe | Select-Object Name, Length, LastWriteTime)",
+        "command(dist\\JARVIS.exe --doctor)",
+        "command(dist\\JARVIS.exe --test-ui)",
+        "read_url(share.gemini.google)",
+        "read_url(youtube.com)",
+        "read_url(raw.githubusercontent.com)",
+        "mcp(jarvis-windows-controller/windows_run_powershell)",
+        "mcp(jarvis-windows-controller/windows_list_windows)",
+        "mcp(jarvis-windows-controller/windows_launch_app)",
+        "mcp(jarvis-windows-controller/windows_inspect_ui)",
+        "mcp(jarvis-windows-controller/windows_capture_screen)",
+        "read_url(samfw.com)",
+        "read_url(xdaforums.com)",
+        "mcp(jarvis-windows-controller/windows_click_ui_element)",
+        "mcp(jarvis-windows-controller/windows_close_window)",
+        "read_url(topjohnwu.github.io)",
+        "mcp(jarvis-windows-controller/windows_focus_window)",
+        "mcp(jarvis-windows-controller/windows_press_hotkey)",
+        "mcp(jarvis-windows-controller/windows_mouse_click)",
+        "mcp(jarvis-windows-controller/windows_type_text)",
+        "read_url(virtualdj.com)",
+        "mcp(jarvis-windows-controller/windows_get_active_window)",
+        "mcp(jarvis-windows-controller/windows_system_telemetry)",
+        "mcp(jarvis-windows-controller/jarvis_cognitive_spark)",
+        "read_url(github.com)",
+        "read_url(bfmeladder.com)",
+        "mcp(jarvis-windows-controller/windows_kill_process)",
+        "mcp(jarvis-windows-controller/windows_mouse_move)",
+        "mcp(jarvis-windows-controller/windows_mouse_scroll)"
+      ]
+    },
+    "nonWorkspaceFileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "permissionGrantsV2Migrated": true,
+    "permissionPreset": "AGENT_PERMISSION_PRESET_TURBO",
+    "queuedMessageDeliveryStrategy": "MESSAGE_DELIVERY_STRATEGY_WHEN_IDLE",
+    "remoteControlEnabled": true,
+    "remoteControlHostname": "desktop-1lcm6e6-plasma-aurora",
+    "sandboxEnabledAtV2Migration": false,
+    "useAiCredits": true
+  }
+}

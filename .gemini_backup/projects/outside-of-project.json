@@ -1,0 +1,11 @@
+{
+  "id": "outside-of-project",
+  "name": "Outside of Project",
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "sandboxMode": false,
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO"
+  },
+  "updatedAt": "2026-09-15T22:17:51.546008Z"
+}

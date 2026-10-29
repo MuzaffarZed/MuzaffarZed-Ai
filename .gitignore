@@ -1,0 +1,71 @@
+# Python virtual environments & caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node modules & Webpack caches
+node_modules/
+.remotion/
+.cache/
+
+# Build & Dist artifacts
+build/
+dist/
+publish_single/
+.build-outputs/
+
+# Large binaries & APKs
+*.apk
+*.exe
+*.jar
+*.pkg
+*.pyz
+*.onnx
+*.node
+
+# Large firmware images
+*.img
+*.lz4
+*.iso
+*.tar.md5
+*.tar
+*.bin
+
+# Video & Audio media files
+*.mp4
+*.wav
+*.mkv
+*.mp3
+
+# Backup folders
+.backup_all/
+.backup_customizations/
+backups/
+.nexus_cache/
+.nexus_snapshots/
+
+# Temporary files & screen dumps
+uidump.xml
+dump.xml
+*.log
+*.tmp
+screen_*.png
+test_*.png
+temp_*.png
+crop_*.png
+
+# Secrets, Auth tokens & Credentials (GitHub Push Protection)
+auth.json
+*.auth.json
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials.json
+client_secret*.json
+**/auth.json
+

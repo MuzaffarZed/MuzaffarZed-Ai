@@ -1,0 +1,16 @@
+{
+  "id": "71dd1f83-e4eb-4df9-adff-31a097295cd5",
+  "name": "Compressed",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///c%3A/Users/MuzaffarZed/Downloads/Compressed"
+      }
+    ]
+  },
+  "settings": {
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO"
+  },
+  "updatedAt": "2026-09-15T22:22:36.763842500Z",
+  "isWorkspaceOnly": false
+}
